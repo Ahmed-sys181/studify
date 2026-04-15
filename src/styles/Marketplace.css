@@ -1,8 +1,9 @@
 /* Marketplace Page */
 .marketplace-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   padding: 2rem;
+  width: 100%;
 }
 
 .marketplace-header {
@@ -44,7 +45,8 @@
 
 .marketplace-feedback-panel p {
   margin: 0;
-  color: #1d4f67;
+  color: #0b3f5a;
+  font-weight: 600;
 }
 
 .dismiss-feedback-btn {
@@ -198,6 +200,8 @@
 
 .item-icon {
   font-size: 3rem;
+  color: #f7fdff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .type-badge {

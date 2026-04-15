@@ -1,8 +1,9 @@
 /* Transport Page */
 .transport-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   padding: 2rem;
+  width: 100%;
 }
 
 .transport-header {
@@ -264,7 +265,7 @@
 /* Transport Tips */
 .transport-tips {
   background: var(--secondary-color);
-  color: white;
+  color: #f7fdff;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(21, 181, 176, 0.3);
@@ -302,7 +303,8 @@
 .tip-card p {
   margin: 0;
   font-size: 0.9rem;
-  opacity: 0.9;
+  opacity: 1;
+  color: #f2fbff;
 }
 
 @media (max-width: 1024px) {

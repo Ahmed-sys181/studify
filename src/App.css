@@ -59,4 +59,5 @@ p {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-inline: clamp(8px, 1.8vw, 16px);
 }
