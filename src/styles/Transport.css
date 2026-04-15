@@ -338,6 +338,26 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
+  .transport-feedback-panel {
+    background: #eef8ff;
+    border: 1px solid #c8e6fb;
+    color: #0f4f6d;
+    border-radius: 10px;
+    padding: 0.9rem 1rem;
+    margin-bottom: 1rem;
+  }
+  .transport-feedback-panel p {
+    margin: 0 0 0.6rem 0;
+  }
+  .dismiss-feedback-btn {
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 6px;
+    padding: 0.45rem 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
   
   .transport-card {
     padding: 1.2rem;

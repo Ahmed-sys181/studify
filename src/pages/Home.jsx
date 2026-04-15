@@ -98,7 +98,7 @@ export default function Home() {
             </p>
             <ul className="module-features">
               <li>✓ Restaurants -30%</li>
-              <li>✓ Coworking 310 TND/mois</li>
+              <li>✓ Coworking 160 TND/mois</li>
               <li>✓ Formations complètes</li>
               <li>✓ Événements gratuits</li>
             </ul>

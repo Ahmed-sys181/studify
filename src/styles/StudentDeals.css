@@ -33,6 +33,33 @@
   overflow: hidden;
 }
 
+.deal-feedback-panel {
+  background: #eef8ff;
+  border-bottom: 1px solid #c8e6fb;
+  padding: 1rem 1.3rem;
+}
+
+.deal-feedback-panel h3 {
+  margin: 0 0 0.35rem 0;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.deal-feedback-panel p {
+  margin: 0 0 0.7rem 0;
+  color: #1d4f67;
+}
+
+.dismiss-feedback-btn {
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 6px;
+  padding: 0.45rem 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 /* Search */
 .search-filter-section {
   padding: 2rem;

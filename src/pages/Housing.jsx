@@ -13,6 +13,7 @@ export default function Housing() {
     transport: []
   });
   const [sortBy, setSortBy] = useState('rating');
+  const [contactRequest, setContactRequest] = useState(null);
 
   const resetFilters = () => {
     setFilters({
@@ -34,6 +35,14 @@ export default function Housing() {
     } else {
       setFilters({ ...filters, [name]: name === 'budget' || name === 'distance' ? parseFloat(value) : value });
     }
+  };
+
+  const handleContactClick = (house) => {
+    setContactRequest({
+      title: house.title,
+      location: house.location,
+      price: house.price
+    });
   };
 
   const filteredAndSorted = useMemo(() => {
@@ -156,6 +165,18 @@ export default function Housing() {
             <h2>{filteredAndSorted.length} logements trouvés</h2>
           </div>
 
+          {contactRequest && (
+            <div className="action-feedback-box">
+              <p>
+                Demande envoyee pour <strong>{contactRequest.title}</strong> ({contactRequest.location}) a {contactRequest.price} TND/mois.
+              </p>
+              <p>Un conseiller vous recontactera dans les 24h.</p>
+              <button className="dismiss-feedback-btn" onClick={() => setContactRequest(null)}>
+                Fermer
+              </button>
+            </div>
+          )}
+
           {filteredAndSorted.length === 0 ? (
             <div className="no-results">
               <p>Aucun logement ne correspond à vos critères. 😢</p>
@@ -209,7 +230,9 @@ export default function Housing() {
                       <span className="stars">⭐ {house.rating}</span>
                       <span className="reviews">({house.reviews} avis)</span>
                     </div>
-                    <button className="contact-btn">Contacter</button>
+                    <button className="contact-btn" onClick={() => handleContactClick(house)}>
+                      Contacter
+                    </button>
                   </div>
                 </div>
               ))}

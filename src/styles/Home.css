@@ -11,12 +11,14 @@
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: center;
-  padding: 5rem 2rem;
-  background: radial-gradient(circle at 20% 20%, rgba(249, 148, 59, 0.22), transparent 35%),
-    linear-gradient(135deg, #14566f 0%, #1b7895 45%, #15b5b0 100%);
+  padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 5vw, 4rem);
+  background: radial-gradient(circle at 85% 15%, rgba(249, 148, 59, 0.3), transparent 30%),
+    radial-gradient(circle at 10% 90%, rgba(21, 181, 176, 0.25), transparent 35%),
+    linear-gradient(125deg, #0f2f4a 0%, #1b5f80 52%, #2b90a1 100%);
   color: white;
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: none;
+  width: 100%;
+  margin: 0;
   border-radius: 0;
   box-shadow: 0 8px 24px rgba(27, 120, 149, 0.2);
   overflow: hidden;
@@ -45,8 +47,9 @@
   width: fit-content;
   padding: 0.4rem 0.9rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(249, 148, 59, 0.2);
+  border: 1px solid rgba(255, 235, 204, 0.45);
+  color: #fff3df;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -54,22 +57,31 @@
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4.6vw, 3.8rem);
   margin: 0;
   display: flex;
   align-items: center;
   gap: 1rem;
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  color: #fff8ec;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
 }
 
 .title-icon {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 4.2vw, 3.4rem);
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.25));
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
+  font-size: clamp(1.02rem, 2.2vw, 1.28rem);
   margin: 0;
-  opacity: 0.95;
-  line-height: 1.6;
+  opacity: 1;
+  line-height: 1.65;
+  color: #f4f7fb;
+  max-width: 62ch;
+  font-weight: 500;
 }
 
 .hero-highlights {
@@ -83,8 +95,9 @@
   align-items: center;
   padding: 0.35rem 0.85rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #eff9ff;
   font-size: 0.85rem;
   font-weight: 600;
 }
@@ -530,7 +543,7 @@
   .hero {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 4rem 1.5rem;
+    padding: 3rem 1.5rem;
   }
 
   .hero-illustration {
@@ -557,7 +570,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 3rem 1rem;
+    padding: 2.5rem 1rem;
   }
   
   .hero-title {

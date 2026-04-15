@@ -5,6 +5,7 @@ import '../styles/StudentDeals.css';
 export default function StudentDeals() {
   const [selectedCategory, setSelectedCategory] = useState('Restaurant');
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedDeal, setSelectedDeal] = useState(null);
 
   const filteredDeals = useMemo(() => {
     return studentDeals.filter(deal => {
@@ -16,6 +17,10 @@ export default function StudentDeals() {
     });
   }, [selectedCategory, searchTerm]);
 
+  const handleDiscoverDeal = (deal) => {
+    setSelectedDeal(deal);
+  };
+
   return (
     <div className="deals-container">
       <div className="deals-header">
@@ -24,6 +29,18 @@ export default function StudentDeals() {
       </div>
 
       <div className="deals-content">
+        {selectedDeal && (
+          <div className="deal-feedback-panel">
+            <h3>Offre selectionnee: {selectedDeal.title}</h3>
+            <p>
+              {selectedDeal.offer} - {selectedDeal.address} - {selectedDeal.openingHours}
+            </p>
+            <button className="dismiss-feedback-btn" onClick={() => setSelectedDeal(null)}>
+              Fermer
+            </button>
+          </div>
+        )}
+
         {/* Search and Filter */}
         <div className="search-filter-section">
           <input
@@ -95,7 +112,9 @@ export default function StudentDeals() {
 
                 <div className="deal-footer">
                   {deal.verified && <span className="verified-badge">✓ Vérifié</span>}
-                  <button className="discover-btn">Découvrir</button>
+                  <button className="discover-btn" onClick={() => handleDiscoverDeal(deal)}>
+                    Découvrir
+                  </button>
                 </div>
               </div>
             ))

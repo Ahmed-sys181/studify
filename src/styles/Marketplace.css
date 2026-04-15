@@ -32,6 +32,31 @@
   overflow: hidden;
 }
 
+.marketplace-feedback-panel {
+  background: #eef8ff;
+  border-bottom: 1px solid #c8e6fb;
+  padding: 1rem 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.marketplace-feedback-panel p {
+  margin: 0;
+  color: #1d4f67;
+}
+
+.dismiss-feedback-btn {
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 6px;
+  padding: 0.45rem 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 /* Search Bar */
 .marketplace-search {
   display: flex;

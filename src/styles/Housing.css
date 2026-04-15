@@ -126,6 +126,29 @@
   font-size: 1.1rem;
 }
 
+.action-feedback-box {
+  background: #eef8ff;
+  border: 1px solid #b9def6;
+  color: #0f4f6d;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.action-feedback-box p {
+  margin: 0 0 0.35rem 0;
+}
+
+.dismiss-feedback-btn {
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 6px;
+  padding: 0.45rem 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .listings-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));

@@ -7,6 +7,7 @@ export default function Marketplace() {
   const [selectedType, setSelectedType] = useState('Vente');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('recent');
+  const [actionFeedback, setActionFeedback] = useState('');
 
   const filteredItems = useMemo(() => {
     let results = marketplaceItems.filter(item => {
@@ -26,6 +27,19 @@ export default function Marketplace() {
     return results;
   }, [selectedCategory, selectedType, searchTerm, sortBy]);
 
+  const handleAddListing = () => {
+    setActionFeedback('Creation d\'annonce: formulaire bientot disponible. En attendant, utilisez le bouton Contacter sur un article.');
+  };
+
+  const handleContactSeller = (item) => {
+    if (item.type === 'Échange') {
+      setActionFeedback(`Demande d'echange envoyee a ${item.seller} pour ${item.title}.`);
+      return;
+    }
+
+    setActionFeedback(`Message envoye au vendeur ${item.seller} pour ${item.title}.`);
+  };
+
   return (
     <div className="marketplace-container">
       <div className="marketplace-header">
@@ -34,6 +48,15 @@ export default function Marketplace() {
       </div>
 
       <div className="marketplace-content">
+        {actionFeedback && (
+          <div className="marketplace-feedback-panel">
+            <p>{actionFeedback}</p>
+            <button className="dismiss-feedback-btn" onClick={() => setActionFeedback('')}>
+              Fermer
+            </button>
+          </div>
+        )}
+
         {/* Search Bar */}
         <div className="marketplace-search">
           <input
@@ -43,7 +66,7 @@ export default function Marketplace() {
             onChange={(e) => setSearchTerm(e.target.value)}
             className="search-input"
           />
-          <button className="add-listing-btn">➕ Ajouter une annonce</button>
+          <button className="add-listing-btn" onClick={handleAddListing}>➕ Ajouter une annonce</button>
         </div>
 
         {/* Filters */}
@@ -151,7 +174,9 @@ export default function Marketplace() {
                     {item.type === 'Partage' && (
                       <span className="sharing-info">Fichiers: {item.price} TND</span>
                     )}
-                    <button className="contact-seller-btn">Contacter</button>
+                    <button className="contact-seller-btn" onClick={() => handleContactSeller(item)}>
+                      Contacter
+                    </button>
                   </div>
                 </div>
               </div>

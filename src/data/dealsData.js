@@ -7,7 +7,7 @@ export const studentDeals = [
     description: "-30% avec carte étudiant",
     address: "Centre-Ville",
     rating: 4.7,
-    offer: "Menu complet à 22 TND",
+    offer: "Menu complet a 12 TND",
     openingHours: "11:30-14:30",
     verified: true
   },
@@ -19,7 +19,7 @@ export const studentDeals = [
     description: "Espace de travail collaboratif",
     address: "Quartier Étudiant",
     rating: 4.9,
-    offer: "Forfait 310 TND/mois illimité",
+    offer: "Forfait 160 TND/mois illimite",
     openingHours: "07:00-23:00",
     verified: true
   },
@@ -31,7 +31,7 @@ export const studentDeals = [
     description: "Python, JavaScript, React avec certification",
     address: "En ligne",
     rating: 4.8,
-    offer: "155 TND/mois accès illimité",
+    offer: "80 TND/mois acces illimite",
     openingHours: "N/A",
     verified: true
   },
@@ -40,10 +40,10 @@ export const studentDeals = [
     category: "Restaurant",
     icon: "🍕",
     title: "Pizza Bella",
-    description: "-25% commande mini 62 TND",
+    description: "-25% commande mini 30 TND",
     address: "Quartier Est",
     rating: 4.5,
-    offer: "Pizza + boisson = 28 TND",
+    offer: "Pizza + boisson = 15 TND",
     openingHours: "18:00-23:30",
     verified: true
   },
@@ -55,7 +55,7 @@ export const studentDeals = [
     description: "Cours avec certificat professionnel",
     address: "En ligne",
     rating: 4.6,
-    offer: "310 TND le cours (6 sessions)",
+    offer: "160 TND le cours (6 sessions)",
     openingHours: "Flexible",
     verified: true
   },
@@ -79,7 +79,7 @@ export const studentDeals = [
     description: "WiFi gratuit + électricité + ambiance décontractée",
     address: "Centre-Ville",
     rating: 4.7,
-    offer: "Consommation = 3.10 TND avec carte",
+    offer: "Consommation = 1.80 TND avec carte",
     openingHours: "08:00-19:00",
     verified: true
   },
@@ -103,7 +103,7 @@ export const studentDeals = [
     description: "Salades fraîches avec produits locaux",
     address: "Quartier Centre",
     rating: 4.8,
-    offer: "Menu salade = 24.80 TND",
+    offer: "Menu salade = 14 TND",
     openingHours: "12:00-21:00",
     verified: true
   },
@@ -115,7 +115,7 @@ export const studentDeals = [
     description: "Réductions ciné et projections spéciales",
     address: "Centre-Ville",
     rating: 4.7,
-    offer: "Ticket réduit = 6.20 TND",
+    offer: "Ticket reduit = 3 TND",
     openingHours: "14:00-23:30",
     verified: true
   }

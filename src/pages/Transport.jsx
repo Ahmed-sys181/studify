@@ -4,6 +4,17 @@ import '../styles/Transport.css';
 
 export default function Transport() {
   const [selectedRoute, setSelectedRoute] = useState(0);
+  const [chosenRoute, setChosenRoute] = useState(null);
+
+  const handleChooseRoute = (route, from, to) => {
+    setChosenRoute({
+      transport: route.transport,
+      duration: route.duration,
+      cost: route.cost,
+      from,
+      to
+    });
+  };
 
   return (
     <div className="transport-container">
@@ -68,6 +79,17 @@ export default function Transport() {
               De <strong>{routeExamples[selectedRoute].from}</strong> à{' '}
               <strong>{routeExamples[selectedRoute].to}</strong>
             </h3>
+
+            {chosenRoute && (
+              <div className="transport-feedback-panel">
+                <p>
+                  Trajet choisi: <strong>{chosenRoute.transport}</strong> de {chosenRoute.from} a {chosenRoute.to} ({chosenRoute.duration} min, {chosenRoute.cost} TND)
+                </p>
+                <button className="dismiss-feedback-btn" onClick={() => setChosenRoute(null)}>
+                  Fermer
+                </button>
+              </div>
+            )}
             
             <div className="routes-list">
               {routeExamples[selectedRoute].routes.map((route, index) => (
@@ -101,7 +123,12 @@ export default function Transport() {
                     </div>
                   </div>
                   
-                  <button className="select-route-btn">Choisir</button>
+                  <button
+                    className="select-route-btn"
+                    onClick={() => handleChooseRoute(route, routeExamples[selectedRoute].from, routeExamples[selectedRoute].to)}
+                  >
+                    Choisir
+                  </button>
                 </div>
               ))}
             </div>
