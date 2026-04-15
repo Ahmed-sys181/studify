@@ -1,0 +1,160 @@
+export const housings = [
+  {
+    id: 1,
+    title: "Studio Modern Centre-Ville",
+    location: "Centre-Ville",
+    faculty: "Faculté des Sciences",
+    price: 1400,
+    distance: 0.5,
+    transport: ["Metro", "Bus"],
+    image: "🏢",
+    rating: 4.8,
+    reviews: 24,
+    amenities: ["WiFi", "Meublé", "Cuisine", "Douche moderne"],
+    description: "Studio moderne avec équipements complets et vue sur la ville"
+  },
+  {
+    id: 2,
+    title: "T2 Proche Université",
+    location: "Quartier Étudiant",
+    faculty: "Faculté de Médecine",
+    price: 1700,
+    distance: 1.2,
+    transport: ["Bus", "Vélo"],
+    image: "🏠",
+    rating: 4.6,
+    reviews: 18,
+    amenities: ["WiFi", "Cuisine", "Balcon", "Chauffage"],
+    description: "T2 confortable à proximité du campus avec parking"
+  },
+  {
+    id: 3,
+    title: "Chambre Partagée",
+    location: "Quartier Étudiant",
+    faculty: "Faculté de Droit",
+    price: 930,
+    distance: 0.8,
+    transport: ["Metro", "Bus", "Vélo"],
+    image: "🏘️",
+    rating: 4.5,
+    reviews: 32,
+    amenities: ["WiFi", "Commune", "Laverie", "Salon partagé"],
+    description: "Chambre dans colocation étudiante avec 3 autres locataires"
+  },
+  {
+    id: 4,
+    title: "Studio Calme Banlieue",
+    location: "Banlieue Proche",
+    faculty: "Faculté des Sciences",
+    price: 1180,
+    distance: 3.5,
+    transport: ["Bus", "Train"],
+    image: "🏡",
+    rating: 4.7,
+    reviews: 15,
+    amenities: ["WiFi", "Calme", "Parking", "Jardin privé"],
+    description: "Studio au calme avec parking inclus et accès jardin"
+  },
+  {
+    id: 5,
+    title: "T1 Hyper Centre",
+    location: "Hyper Centre",
+    faculty: "Toutes facultés",
+    price: 2000,
+    distance: 0.2,
+    transport: ["Metro", "Bus", "Tram"],
+    image: "🏢",
+    rating: 4.9,
+    reviews: 45,
+    amenities: ["WiFi", "Moderne", "Ascenseur", "Sécurité 24/7"],
+    description: "T1 dans le cœur de la ville avec balcon vue panoramique"
+  },
+  {
+    id: 6,
+    title: "Colocation 4 Personnes",
+    location: "Quartier Est",
+    faculty: "Faculté de Commerce",
+    price: 990,
+    distance: 2.0,
+    transport: ["Bus", "Vélo"],
+    image: "🏠",
+    rating: 4.4,
+    reviews: 28,
+    amenities: ["WiFi", "Jardin", "Cuisine équipée", "Terrain de pétanque"],
+    description: "Colocation dans maison récente avec espaces communs spacieux"
+  },
+  {
+    id: 7,
+    title: "T2 Moderne Quartier Ouest",
+    location: "Quartier Ouest",
+    faculty: "Faculté des Arts",
+    price: 1600,
+    distance: 2.5,
+    transport: ["Bus", "Tram"],
+    image: "🏗️",
+    rating: 4.7,
+    reviews: 20,
+    amenities: ["WiFi", "Climatisation", "Lave-linge", "Terrasse"],
+    description: "T2 neuf avec aménagements modernes et terrasse agréable"
+  },
+  {
+    id: 8,
+    title: "Chambre Meublée Sèche Canapé",
+    location: "Quartier Nord",
+    faculty: "Faculté de Droit",
+    price: 850,
+    distance: 1.5,
+    transport: ["Metro", "Bus"],
+    image: "🛏️",
+    rating: 4.6,
+    reviews: 15,
+    amenities: ["WiFi", "Meublée", "Kitchenette", "Salle commune"],
+    description: "Chambre meublée avec kitchenette et accès salle de musique"
+  },
+  {
+    id: 9,
+    title: "Studio Lumineux Quartier Centre",
+    location: "Quartier Centre",
+    faculty: "Faculté de Sciences Humaines",
+    price: 1300,
+    distance: 0.6,
+    transport: ["Metro", "Bus", "Vélo"],
+    image: "☀️",
+    rating: 4.8,
+    reviews: 29,
+    amenities: ["WiFi", "Balcon", "Cave", "Interphone"],
+    description: "Studio très lumineux avec vue sur square avec arbres"
+  },
+  {
+    id: 10,
+    title: "Colocation Étudiants 5 Chambres",
+    location: "Ville Nouvelle",
+    faculty: "Toutes facultés",
+    price: 1100,
+    distance: 4.0,
+    transport: ["Bus", "Train"],
+    image: "🏘️",
+    rating: 4.5,
+    reviews: 22,
+    amenities: ["WiFi", "Piscine commune", "Salle de sport", "Parking"],
+    description: "Grande colocation avec piscine et salle de sport commune"
+  }
+];
+
+export const faculties = [
+  "Toutes facultés",
+  "Faculté des Sciences",
+  "Faculté de Médecine",
+  "Faculté de Droit",
+  "Faculté de Commerce",
+  "Faculté des Arts"
+];
+
+export const transportModes = [
+  "Metro",
+  "Bus",
+  "Tram",
+  "Train",
+  "Vélo",
+  "Voiture"
+];
